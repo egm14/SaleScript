@@ -1,5 +1,3 @@
-
-
 <!-- VIDEO HIDDEN AND LOOP CONTROL -->
 <script>
 jQuery(document).ready(function() {
