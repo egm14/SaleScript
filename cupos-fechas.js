@@ -24,6 +24,7 @@ function init(){
 /********crear fecha *******/
      fecha();
 
+
 /***** Cupo Members ******/
 	var cookieBar = readCookie("viewStind") | 0;
 	var cookieTimer = 7; //days
@@ -77,13 +78,13 @@ function init(){
 		createCookie("viewStind", cookieBar + 1 , cookieTimer);
 		/*To do*/
 		if(cookieBar >= 1){
-			var numberGrow = getRandomInt(3,5); //porciento de aumento 1 visita
+			var numberGrow = getRandomInt(3,5); //porciento de aumento 1ra visita
 		}if(cookieBar == 2){
-			var numberGrow = getRandomInt(6,9); //porciento de aumento 2 visita
+			var numberGrow = getRandomInt(6,9); //porciento de aumento 2da visita
 		}if(cookieBar == 3){
-			var numberGrow = getRandomInt(10,12); //porciento de aumento 3 visita
+			var numberGrow = getRandomInt(10,12); //porciento de aumento 3ra visita
 		}if(cookieBar > 3){
-			var numberGrow = 12; //porciento de aumento 4 visita
+			var numberGrow = 12; //porciento de aumento 4ta visita
 		}
 		if(newlessCupos <= 1){
 				letraCupo = "CUPO";
@@ -102,7 +103,6 @@ function init(){
 		createCookie("viewStind", cookieBar + 1, cookieTimer);
 	}
 
-
 	function totalCupos(cupos, porciento){
 		var por = (100 - porciento)/100;
 		return Math.round(cupos / por);
@@ -116,7 +116,6 @@ function init(){
 			return result;
 		}
 	}
-
 	function newlessCupos(){
 		var cVendidos = (numberGrow /100) * totalPlazas/*totalPlazas*/;
 		//return parseInt(cVendidos);
@@ -127,6 +126,7 @@ function init(){
 			return result;
 		}
 	}
+
 
 	/*** Function Random number ***/
 	function getRandomInt(min, max) {
